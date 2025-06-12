@@ -1,4 +1,4 @@
-package com.example.scenepick.ui.theme
+package com.example.scenepick.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
