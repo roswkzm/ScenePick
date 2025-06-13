@@ -7,15 +7,12 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.scenepick.core.designsystem.theme.ScenePickTheme
+import com.example.scenepick.ui.SpApp
+import com.example.scenepick.ui.rememberSpAppState
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private val viewModel: MainActivityViewModel by viewModels()
@@ -35,8 +32,12 @@ class MainActivity : ComponentActivity() {
         )
 
         setContent {
-            ScenePickTheme {
+            val appState = rememberSpAppState()
 
+            ScenePickTheme {
+                ScenePickTheme {
+                    SpApp(appState)
+                }
             }
         }
     }
