@@ -42,6 +42,9 @@ android {
 }
 
 dependencies {
+    implementation(projects.feature.home)
+    implementation(projects.feature.saved)
+
     implementation(projects.core.designsystem)
 
     implementation(libs.androidx.activity.compose)
