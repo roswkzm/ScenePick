@@ -1,3 +1,5 @@
+import com.example.scenepick.SpBuildType
+
 plugins {
     alias(libs.plugins.scenepick.android.application)
     alias(libs.plugins.scenepick.android.application.compose)
@@ -19,12 +21,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix = SpBuildType.DEBUG.applicationIdSuffix
+        }
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            applicationIdSuffix = SpBuildType.RELEASE.applicationIdSuffix
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
         }
     }
 
@@ -45,6 +48,7 @@ dependencies {
     implementation(projects.feature.home)
     implementation(projects.feature.saved)
 
+    implementation(projects.core.common)
     implementation(projects.core.designsystem)
 
     implementation(libs.androidx.activity.compose)
