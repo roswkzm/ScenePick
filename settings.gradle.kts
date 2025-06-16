@@ -38,3 +38,4 @@ include(":core:common")
 
 include(":feature:home")
 include(":feature:saved")
+include(":core:domain")
