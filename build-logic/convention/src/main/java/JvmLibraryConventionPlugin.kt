@@ -29,7 +29,6 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
             configureKotlinJvm()
             dependencies {
                 "testImplementation"(libs.findLibrary("kotlin.test").get())
-                "implementation"(libs.findLibrary("timber").get())
             }
         }
     }
