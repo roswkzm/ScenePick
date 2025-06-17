@@ -31,6 +31,8 @@ rootProject.name = "scenepick"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 
+include(":core:domain")
+include(":core:data")
 include(":core:designsystem")
 include(":core:datastore")
 include(":core:datastore-proto")
@@ -38,4 +40,3 @@ include(":core:common")
 
 include(":feature:home")
 include(":feature:saved")
-include(":core:domain")
