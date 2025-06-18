@@ -1,8 +1,8 @@
 package com.example.scenepick.core.network.impl
 
 import com.example.scenepick.core.data.datasource.remote.MovieRemoteDataSource
-import com.example.scenepick.core.data.model.SummaryMovieEntity
-import com.example.scenepick.core.network.model.SummaryMovieResponse
+import com.example.scenepick.core.data.model.SummaryMovieWrapperEntity
+import com.example.scenepick.core.network.model.SummaryMovieWrapperResponse
 import kotlinx.serialization.json.Json
 import okhttp3.Call
 import okhttp3.MediaType.Companion.toMediaType
@@ -19,7 +19,7 @@ private interface RetrofitMovieNetworkApi {
     suspend fun getSummaryMovies(
         @Query("language") language: String,
         @Query("region") country: String,
-    ): SummaryMovieResponse
+    ): SummaryMovieWrapperResponse
 }
 
 private const val BASE_URL = "https://api.themoviedb.org/3/"
@@ -40,7 +40,7 @@ internal class MovieRemoteDataSourceImpl @Inject constructor(
             .build()
             .create(RetrofitMovieNetworkApi::class.java)
 
-    override suspend fun getSummaryMovies(): SummaryMovieEntity =
+    override suspend fun getSummaryMovies(): SummaryMovieWrapperEntity =
         networkApi.getSummaryMovies(Locale.getDefault().language, Locale.getDefault().country)
             .toData()
 }
