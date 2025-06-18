@@ -1,4 +1,4 @@
-package com.example.scenepick.core.data.datasource
+package com.example.scenepick.core.data.datasource.local
 
 import com.example.scenepick.core.data.model.ThemeConfigEntity
 import com.example.scenepick.core.data.model.UserPreferencesEntity

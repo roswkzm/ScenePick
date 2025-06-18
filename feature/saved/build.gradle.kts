@@ -9,7 +9,7 @@ android {
 
 dependencies {
 
-//    implementation(projects.core.domain)
+    implementation(projects.core.domain)
 
     testImplementation(libs.hilt.android.testing)
 }

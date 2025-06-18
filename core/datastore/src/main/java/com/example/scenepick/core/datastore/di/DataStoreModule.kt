@@ -1,6 +1,6 @@
 package com.example.scenepick.core.datastore.di
 
-import com.example.scenepick.core.data.datasource.UserPreferencesDataSource
+import com.example.scenepick.core.data.datasource.local.UserPreferencesDataSource
 import com.example.scenepick.core.datastore.impl.UserPreferencesDataSourceImpl
 import dagger.Binds
 import dagger.Module

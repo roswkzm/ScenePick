@@ -1,6 +1,6 @@
 package com.example.scenepick.core.data.impl
 
-import com.example.scenepick.core.data.datasource.UserPreferencesDataSource
+import com.example.scenepick.core.data.datasource.local.UserPreferencesDataSource
 import com.example.scenepick.core.data.model.toEntity
 import com.example.scenepick.core.domain.model.ThemeConfig
 import com.example.scenepick.core.domain.model.UserPreferences

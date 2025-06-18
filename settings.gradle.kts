@@ -37,6 +37,7 @@ include(":core:designsystem")
 include(":core:datastore")
 include(":core:datastore-proto")
 include(":core:common")
+include(":core:network")
 
 include(":feature:home")
 include(":feature:saved")

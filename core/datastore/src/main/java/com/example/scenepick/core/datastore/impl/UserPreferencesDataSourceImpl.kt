@@ -1,7 +1,7 @@
 package com.example.scenepick.core.datastore.impl
 
 import androidx.datastore.core.DataStore
-import com.example.scenepick.core.data.datasource.UserPreferencesDataSource
+import com.example.scenepick.core.data.datasource.local.UserPreferencesDataSource
 import com.example.scenepick.core.data.model.ThemeConfigEntity
 import com.example.scenepick.core.data.model.UserPreferencesEntity
 import com.example.scenepick.core.datastore.UserPreferences
