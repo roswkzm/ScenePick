@@ -2,7 +2,7 @@ package com.example.scenepick.core.domain.model
 
 import java.util.Date
 
-data class SummaryMovie(
+data class PopularMovie(
     val id: Int,
     val name: String,
     val description: String,

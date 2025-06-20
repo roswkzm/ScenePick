@@ -12,7 +12,8 @@ internal class RequestHeaderInterceptor @Inject constructor(
     override fun intercept(chain: Interceptor.Chain): Response = runBlocking {
         val originalRequest = chain.request()
         val newRequest = originalRequest.newBuilder()
-            .header("Authorization", "Bearer ${BuildConfig.API_KEY}")
+            .addHeader("Authorization", "Bearer ${BuildConfig.API_KEY}")
+            .addHeader("accept", "application/json")
             .build()
         chain.proceed(newRequest)
     }
