@@ -1,6 +1,8 @@
 package com.example.scenepick.core.data.di
 
+import com.example.scenepick.core.data.impl.MovieRepositoryImpl
 import com.example.scenepick.core.data.impl.UserPreferencesRepositoryImpl
+import com.example.scenepick.core.domain.repository.MovieRepository
 import com.example.scenepick.core.domain.repository.UserPreferencesRepository
 import dagger.Binds
 import dagger.Module
@@ -16,4 +18,7 @@ internal abstract class RepositoryModule {
     @Singleton
     abstract fun bindUserPreferencesRepository(repo: UserPreferencesRepositoryImpl): UserPreferencesRepository
 
+    @Binds
+    @Singleton
+    abstract fun bindMovieRepository(movieRepositoryImpl: MovieRepositoryImpl): MovieRepository
 }
